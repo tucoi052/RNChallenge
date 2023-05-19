@@ -1,0 +1,19 @@
+{
+  "dialog": {
+    "error": "Error",
+    "cancel": "Cancel",
+    "warning": "Warn",
+    "loading": "Loading",
+    "select": "Select"
+  },
+  "main": {
+    "chatTab": {
+      "tvChat": "Chat",
+      "tvTabLabel": "Chat"
+    },
+    "profileTab": {
+      "tvProfile": "Profile",
+      "tvTabLabel": "Profile"
+    }
+  }
+}
