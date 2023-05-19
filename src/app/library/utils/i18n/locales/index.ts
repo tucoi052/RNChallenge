@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import en from './source/en.json';
 
-export const resources = { en };
+export const resources = {en};
 
 type IsNested<T> = T extends string ? false : true;
 

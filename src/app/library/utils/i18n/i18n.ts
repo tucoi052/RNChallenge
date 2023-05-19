@@ -1,9 +1,9 @@
-import { initReactI18next } from 'react-i18next';
+import {initReactI18next} from 'react-i18next';
 
-import { ENVConfig } from '@config/env';
-import i18n, { LanguageDetectorAsyncModule, Resource } from 'i18next';
+import {ENVConfig} from '@config/env';
+import i18n, {LanguageDetectorAsyncModule, Resource} from 'i18next';
 
-import { resources } from './locales';
+import {resources} from './locales';
 
 const languageDetector: LanguageDetectorAsyncModule = {
   type: 'languageDetector',

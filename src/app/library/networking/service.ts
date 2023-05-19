@@ -1,14 +1,14 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
-import { dispatch, getState } from '@common';
-import { RESULT_CODE_PUSH_OUT, TIME_OUT } from '@config/api';
-import { ENVConfig } from '@config/env';
-import { ParamsNetwork, ResponseBase } from '@config/type';
-import { AppState } from '@model/app';
-import { appActions } from '@redux-slice';
-import Axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
+import {dispatch, getState} from '@common';
+import {RESULT_CODE_PUSH_OUT, TIME_OUT} from '@config/api';
+import {ENVConfig} from '@config/env';
+import {ParamsNetwork, ResponseBase} from '@config/type';
+import {AppState} from '@model/app';
+import {appActions} from '@redux-slice';
+import Axios, {AxiosError, AxiosRequestConfig, AxiosResponse} from 'axios';
 
-import { ApiConstants } from './api';
+import {ApiConstants} from './api';
 import {
   handleErrorAxios,
   handleParameter,
@@ -59,7 +59,7 @@ function Request<T = Record<string, unknown>>(
   config: AxiosRequestConfig,
   isCheckOut = true,
 ) {
-  const { token }: AppState = getState('app');
+  const {token}: AppState = getState('app');
   const defaultConfig: AxiosRequestConfig = {
     baseURL: ENVConfig.API_URL,
     timeout: TIME_OUT,
@@ -102,13 +102,13 @@ async function Post<T>(params: ParamsNetwork) {
 type ParameterPostFormData = AxiosRequestConfig & ParamsNetwork;
 // post FormData
 async function PostFormData<T>(params: ParamsNetwork) {
-  const { token }: AppState = getState('app');
+  const {token}: AppState = getState('app');
   const headers: AxiosRequestConfig['headers'] = {
     [tokenKeyHeader]: token ?? '',
     'Content-Type': 'multipart/form-data',
   };
   return Request<T>(
-    handleParameter<ParameterPostFormData>({ ...params, headers }, 'POST'),
+    handleParameter<ParameterPostFormData>({...params, headers}, 'POST'),
   );
 }
 

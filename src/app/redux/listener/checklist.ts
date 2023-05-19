@@ -1,15 +1,13 @@
-import { handleErrorResponse, STORAGE_KEY_CHECK_LIST } from '@common';
-import { takeLatestListeners } from '@listener';
-import { goBack } from '@navigation/navigation-service';
-import { ApiConstants, NetWorkService } from '@networking';
-import { loadString, saveString } from '@utils/storage';
-
-import { checklistActions } from '../action-slice/checklist';
+import {STORAGE_KEY_CHECK_LIST} from '@common';
+import {takeLatestListeners} from '@listener';
+import {goBack} from '@navigation/navigation-service';
+import {checklistActions} from '@redux-slice';
+import {loadString, saveString} from '@utils/storage';
 
 takeLatestListeners(true)({
   actionCreator: checklistActions.createChecklist,
   effect: async (action, listenerApi) => {
-    const { body } = action.payload;
+    const {body} = action.payload;
     const list = listenerApi.getState().checklist.listDataChecklist;
     const newList = [...(list ?? []), body];
     saveString(STORAGE_KEY_CHECK_LIST, JSON.stringify(newList));

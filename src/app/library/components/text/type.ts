@@ -1,16 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import {
-  StyleProp,
-  TextProps as TextProperties,
-  TextStyle,
-} from 'react-native';
+import {StyleProp, TextProps as TextProperties, TextStyle} from 'react-native';
 
-import { Colors } from '@theme';
-import { FontFamily } from '@theme/typography';
-import { I18nKeys } from '@utils/i18n/locales';
+import {Colors} from '@theme';
+import {FontFamily} from '@theme/typography';
+import {I18nKeys} from '@utils/i18n/locales';
 
-import { TextPresetNames } from './preset';
+import {TextPresetNames} from './preset';
 
 type FontWeight =
   | 'normal'

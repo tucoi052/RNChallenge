@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { SLICE_NAME } from '@config/type';
-import { AuthenticationState } from '@model/authentication';
+import {SLICE_NAME} from '@config/type';
+import {AuthenticationState} from '@model/authentication';
 import * as Action from '@redux-action-type/authentication';
-import { createAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {createAction, createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 
 const initialState: AuthenticationState = {
   loading: false,

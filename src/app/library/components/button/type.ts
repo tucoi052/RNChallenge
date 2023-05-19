@@ -8,10 +8,10 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { Colors } from '@theme';
-import { I18nKeys } from '@utils/i18n/locales';
+import {Colors} from '@theme';
+import {I18nKeys} from '@utils/i18n/locales';
 
-import { ButtonPresetNames } from './preset';
+import {ButtonPresetNames} from './preset';
 
 type Direction = 'row' | 'column' | 'column-reverse' | 'row-reverse';
 
@@ -31,7 +31,7 @@ type OverFlow = 'visible' | 'hidden' | 'scroll';
 
 export type ShadowConfig = {
   shadowColor?: ColorValue | undefined;
-  shadowOffset?: { width: number; height: number } | undefined;
+  shadowOffset?: {width: number; height: number} | undefined;
   shadowOpacity?: number | undefined;
   shadowRadius?: number | undefined;
 };

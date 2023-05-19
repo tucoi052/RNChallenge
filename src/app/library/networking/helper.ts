@@ -1,4 +1,4 @@
-import { handleErrorApi, logout } from '@common';
+import {handleErrorApi, logout} from '@common';
 import {
   CODE_SUCCESS,
   CODE_TIME_OUT,
@@ -6,9 +6,9 @@ import {
   RESULT_CODE_PUSH_OUT,
   STATUS_TIME_OUT,
 } from '@config/api';
-import { ParamsNetwork, ResponseBase } from '@config/type';
-import { translate } from '@utils/i18n/translate';
-import { AxiosError, AxiosRequestConfig, AxiosResponse, Method } from 'axios';
+import {ParamsNetwork, ResponseBase} from '@config/type';
+import {translate} from '@utils/i18n/translate';
+import {AxiosError, AxiosRequestConfig, AxiosResponse, Method} from 'axios';
 
 const responseDefault: ResponseBase<Record<string, unknown>> = {
   code: -500,
@@ -27,7 +27,7 @@ export const handleResponseAxios = <T = Record<string, unknown>>(
   res: AxiosResponse<T>,
 ): ResponseBase<T> => {
   if (res.data) {
-    return { code: CODE_SUCCESS, status: true, data: res.data };
+    return {code: CODE_SUCCESS, status: true, data: res.data};
   }
   return responseDefault as ResponseBase<T>;
 };
@@ -66,7 +66,7 @@ export const handleParameter = <T extends ParamsNetwork>(
   props: T,
   method: Method,
 ): AxiosRequestConfig => {
-  const { url, body, path, params } = props;
+  const {url, body, path, params} = props;
   return {
     ...props,
     method,

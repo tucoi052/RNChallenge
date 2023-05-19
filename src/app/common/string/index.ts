@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { processColor } from 'react-native';
+import {processColor} from 'react-native';
 
-import { ValidateMessageObject } from '@config/type';
+import {ValidateMessageObject} from '@config/type';
 
-import { KANA_FULL_HALF_MAP } from '../constant';
+import {KANA_FULL_HALF_MAP} from '../constant';
 
 export const trimArray = (sourceArr: Array<unknown> = []): Array<unknown> => {
   return sourceArr.map((element: any) => {
@@ -79,18 +79,18 @@ export const onHandleTagToArrayText = (
   const textSplit = source.split(' ');
   const arrText: ResultHandleTagToArrayText[] = [];
   textSplit.forEach((text: string, i: number) => {
-    const textData = { text: text, bold: false };
+    const textData = {text: text, bold: false};
     if (text[0] === char) {
       textData.bold = true;
       arrText.push(textData);
     } else {
-      arrText.push({ text: text, bold: false });
+      arrText.push({text: text, bold: false});
     }
     if (
       (text === '' && i !== textSplit.length - 1) ||
       i !== textSplit.length - 1
     ) {
-      arrText.push({ text: ' ', bold: false });
+      arrText.push({text: ' ', bold: false});
     }
   });
   return arrText;

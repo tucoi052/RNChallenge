@@ -1,7 +1,7 @@
-import { ReactElement } from 'react';
-import { ViewStyle } from 'react-native';
+import {ReactElement} from 'react';
+import {ViewStyle} from 'react-native';
 
-import { TypeIn, TypeOut } from './untils';
+import {TypeIn, TypeOut} from './untils';
 export type Direction = 'up' | 'down' | 'left' | 'right';
 export interface ModalProps {
   /**

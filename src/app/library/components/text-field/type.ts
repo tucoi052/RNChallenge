@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { StyleProp, TextInputProps, TextStyle, ViewStyle } from 'react-native';
+import {StyleProp, TextInputProps, TextStyle, ViewStyle} from 'react-native';
 
-import { UseFormTrigger } from 'react-hook-form';
+import {UseFormTrigger} from 'react-hook-form';
 
-import { I18nKeys } from '@utils/i18n/locales';
+import {I18nKeys} from '@utils/i18n/locales';
 
 export interface InputBaseProps extends TextInputProps {
   /**

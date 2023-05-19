@@ -7,7 +7,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { Colors } from '@theme';
+import {Colors} from '@theme';
 
 type Direction = 'row' | 'column' | 'column-reverse' | 'row-reverse';
 
@@ -27,13 +27,13 @@ type OverFlow = 'visible' | 'hidden' | 'scroll';
 
 export type ShadowConfig = {
   shadowColor?: ColorValue | undefined;
-  shadowOffset?: { width: number; height: number } | undefined;
+  shadowOffset?: {width: number; height: number} | undefined;
   shadowOpacity?: number | undefined;
   shadowRadius?: number | undefined;
 };
 
 type StyleStringOrNumber = string | number;
-export interface BlockProps extends ViewProps {
+export interface BoxProps extends ViewProps {
   flexWrap?: FlexWrap;
 
   left?: StyleStringOrNumber;

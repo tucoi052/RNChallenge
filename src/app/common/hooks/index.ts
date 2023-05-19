@@ -18,12 +18,12 @@ import {
   Platform,
 } from 'react-native';
 
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
-import { onCheckType } from '@common';
-import { ValidateMessageObject } from '@config/type';
-import NetInfo, { NetInfoState } from '@react-native-community/netinfo';
-import { AppTheme, useTheme } from '@theme';
+import {onCheckType} from '@common';
+import {ValidateMessageObject} from '@config/type';
+import NetInfo, {NetInfoState} from '@react-native-community/netinfo';
+import {AppTheme, useTheme} from '@theme';
 
 type UseStateFull<T = any> = {
   value: T;
@@ -108,16 +108,16 @@ type UseArrayActions<T> = {
   clear: () => void;
   move: (from: number, to: number) => void;
   removeById: (
-    id: T extends { id: string }
+    id: T extends {id: string}
       ? string
-      : T extends { id: number }
+      : T extends {id: number}
       ? number
       : unknown,
   ) => void;
   modifyById: (
-    id: T extends { id: string }
+    id: T extends {id: string}
       ? string
-      : T extends { id: number }
+      : T extends {id: number}
       ? number
       : unknown,
     newValue: Partial<T>,
@@ -171,7 +171,7 @@ function useArray<T = any>(initial: T[]): UseArray<T> {
   const modifyById = useCallback(
     (id, newValue) =>
       setValue(arr =>
-        arr.map((v: any) => (v.id === id ? { ...v, ...newValue } : v)),
+        arr.map((v: any) => (v.id === id ? {...v, ...newValue} : v)),
       ),
     [],
   );
@@ -220,7 +220,7 @@ function useBoolean(initial: boolean): UseBoolean {
   const setFalse = useCallback(() => setValue(false), []);
 
   const actions = useMemo(
-    () => ({ setValue, toggle, setTrue, setFalse }),
+    () => ({setValue, toggle, setTrue, setFalse}),
     [setFalse, setTrue, toggle],
   );
 
@@ -546,7 +546,7 @@ function useMessageYupTranslation(msg?: string) {
         );
       });
     }
-    return t(parsed.keyT, { ...(parsed.options ?? {}), ...optionsTx });
+    return t(parsed.keyT, {...(parsed.options ?? {}), ...optionsTx});
   }, [parsed, t, msg]);
 }
 

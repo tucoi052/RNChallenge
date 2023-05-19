@@ -1,6 +1,6 @@
 export const ColorDefault = {
   primary: 'rgb(0, 122, 255)',
-  background: 'rgb(242, 242, 242)',
+  background: 'rgb(255, 255, 255)',
   card: 'rgb(255, 255, 255)',
   text: '#3F414E',
   txtButton: '#F6F1FB',
@@ -10,6 +10,7 @@ export const ColorDefault = {
   info: '#ffd700',
   txtSecound: '#fff',
   colorPrimary: '#8E97FD',
+  grey: 'grey',
 };
 export const ColorDark = {
   primary: 'rgb(10, 132, 255)',
@@ -23,4 +24,5 @@ export const ColorDark = {
   info: '#ffd700',
   txtSecound: '#000',
   colorPrimary: '#8E97FD',
+  grey: 'grey',
 };

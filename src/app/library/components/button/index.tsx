@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react';
-import { StyleProp, TouchableOpacity, ViewStyle } from 'react-native';
-import { useTheme } from '@theme';
-import { propsToStyle, sizeScale } from '@common';
-import { stylesText, stylesView } from './preset';
-import { ButtonProps } from './type';
+import React, {useMemo} from 'react';
+import {StyleProp, TouchableOpacity, ViewStyle} from 'react-native';
+import {useTheme} from '@theme';
+import {propsToStyle, sizeScale} from '@common';
+import {stylesText, stylesView} from './preset';
+import {ButtonProps} from './type';
 
-import { Text } from '../text';
+import {Text} from '../text';
 
 export const Button = (props: ButtonProps) => {
   // state
@@ -93,9 +93,9 @@ export const Button = (props: ButtonProps) => {
         borderWidth: 1,
         borderColor: '#bbb',
       },
-      colorTheme && { backgroundColor: theme.colors[colorTheme] },
-      borderColorTheme && { borderColor: theme.colors[borderColorTheme] },
-      middle && { alignItems: 'center' },
+      colorTheme && {backgroundColor: theme.colors[colorTheme]},
+      borderColorTheme && {borderColor: theme.colors[borderColorTheme]},
+      middle && {alignItems: 'center'},
       shadow && {
         shadowColor: '#000',
         shadowOffset: {
@@ -109,23 +109,23 @@ export const Button = (props: ButtonProps) => {
         ...shadowConfig,
       },
       propsToStyle([
-        { margin: sizeScale(m!) },
-        { marginLeft: sizeScale(ml!) },
-        { marginRight: sizeScale(mr!) },
-        { marginTop: sizeScale(mt!) },
-        { marginBottom: sizeScale(mb!) },
-        { marginVertical: sizeScale(mv!) },
-        { marginHorizontal: sizeScale(mh!) },
-        { flexDirection },
-        { padding: sizeScale(p!) },
-        { paddingRight: sizeScale(pr!) },
-        { paddingBottom: sizeScale(pb!) },
-        { paddingLeft: sizeScale(pl!) },
-        { paddingTop: sizeScale(pt!) },
-        { paddingHorizontal: sizeScale(ph!) },
-        { paddingVertical: pv },
-        { width: typeof width === 'number' ? sizeScale(width!) : width },
-        { height: typeof height === 'number' ? sizeScale(height!) : height },
+        {margin: sizeScale(m!)},
+        {marginLeft: sizeScale(ml!)},
+        {marginRight: sizeScale(mr!)},
+        {marginTop: sizeScale(mt!)},
+        {marginBottom: sizeScale(mb!)},
+        {marginVertical: sizeScale(mv!)},
+        {marginHorizontal: sizeScale(mh!)},
+        {flexDirection},
+        {padding: sizeScale(p!)},
+        {paddingRight: sizeScale(pr!)},
+        {paddingBottom: sizeScale(pb!)},
+        {paddingLeft: sizeScale(pl!)},
+        {paddingTop: sizeScale(pt!)},
+        {paddingHorizontal: sizeScale(ph!)},
+        {paddingVertical: pv},
+        {width: typeof width === 'number' ? sizeScale(width!) : width},
+        {height: typeof height === 'number' ? sizeScale(height!) : height},
         {
           maxHeight:
             typeof maxHeight === 'number' ? sizeScale(maxHeight!) : maxHeight,
@@ -142,35 +142,35 @@ export const Button = (props: ButtonProps) => {
           minWidth:
             typeof minWidth === 'number' ? sizeScale(minWidth!) : minWidth,
         },
-        { borderWidth },
-        { borderColor },
-        { backgroundColor },
-        { justifyContent },
-        { alignItems },
-        { alignSelf },
-        { borderRadius },
-        { flex },
-        { position },
-        { left },
-        { right },
-        { bottom },
-        { top },
-        { zIndex },
-        { overflow },
-        { borderBottomColor },
-        { borderBottomLeftRadius },
-        { borderBottomRightRadius },
-        { borderLeftColor },
-        { borderRightColor },
-        { borderStyle },
-        { borderTopColor },
-        { borderTopLeftRadius },
-        { borderTopRightRadius },
-        { opacity },
-        { borderBottomWidth },
-        { borderLeftWidth },
-        { borderRightWidth },
-        { borderTopWidth },
+        {borderWidth},
+        {borderColor},
+        {backgroundColor},
+        {justifyContent},
+        {alignItems},
+        {alignSelf},
+        {borderRadius},
+        {flex},
+        {position},
+        {left},
+        {right},
+        {bottom},
+        {top},
+        {zIndex},
+        {overflow},
+        {borderBottomColor},
+        {borderBottomLeftRadius},
+        {borderBottomRightRadius},
+        {borderLeftColor},
+        {borderRightColor},
+        {borderStyle},
+        {borderTopColor},
+        {borderTopLeftRadius},
+        {borderTopRightRadius},
+        {opacity},
+        {borderBottomWidth},
+        {borderLeftWidth},
+        {borderRightWidth},
+        {borderTopWidth},
       ]),
     ],
     [

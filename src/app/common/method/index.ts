@@ -1,11 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {Alert, Platform} from 'react-native';
 
-import {ERROR_NETWORK_CODE} from '@config/api';
-import {ResponseBase} from '@config/type';
 import {appActions} from '@redux-slice';
 import {remove} from '@storage';
-import {translate} from '@utils/i18n/translate';
 
 import {STORAGE_KEY_TOKEN} from '../constant';
 import {dispatch} from '../redux';
@@ -55,8 +52,4 @@ export const isIos = Platform.OS === 'ios';
 export const logout = () => {
   dispatch(appActions.logout());
   remove(STORAGE_KEY_TOKEN);
-};
-
-const handleData = (responseError: ResponseBase<null>) => {
-  return responseError;
 };

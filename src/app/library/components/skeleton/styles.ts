@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
-import { BASE_ITEM_HEIGHT } from './constants';
+import {BASE_ITEM_HEIGHT} from './constants';
 
 export const styles = StyleSheet.create({
   markElement: {

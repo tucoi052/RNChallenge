@@ -1,15 +1,14 @@
-import React, { Suspense } from 'react';
-import { LogBox, StyleSheet, UIManager } from 'react-native';
-
-import { I18nextProvider } from 'react-i18next';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Provider } from 'react-redux';
-
-import { dispatch, isIos } from '@common';
-import { PortalProvider } from '@gorhom/portal';
-import { AppContainer } from '@navigation/app-navigation';
-import { store } from '@store/store';
+import React, {Suspense} from 'react';
+import {LogBox, StyleSheet, UIManager} from 'react-native';
+import {I18nextProvider} from 'react-i18next';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Provider} from 'react-redux';
+import KeyboardManager from 'react-native-keyboard-manager';
+import {isIos} from '@common';
+import {PortalProvider} from '@gorhom/portal';
+import {AppContainer} from '@navigation/app-navigation';
+import {store} from '@store/store';
 import I18n from '@utils/i18n/i18n';
 
 declare module 'react' {
@@ -33,6 +32,18 @@ if (!isIos) {
     UIManager.setLayoutAnimationEnabledExperimental(true);
   }
 }
+KeyboardManager.setEnable(true);
+KeyboardManager.setEnableDebugging(false);
+KeyboardManager.setKeyboardDistanceFromTextField(10);
+KeyboardManager.setLayoutIfNeededOnUpdate(true);
+KeyboardManager.setEnableAutoToolbar(false);
+KeyboardManager.setOverrideKeyboardAppearance(true);
+// "default" | "light" | "dark"
+KeyboardManager.setKeyboardAppearance('default');
+KeyboardManager.setShouldResignOnTouchOutside(true);
+KeyboardManager.setShouldPlayInputClicks(true);
+KeyboardManager.resignFirstResponder();
+KeyboardManager.reloadLayoutIfNeeded();
 
 const styles = StyleSheet.create({
   root: {

@@ -3,11 +3,11 @@ import {
   STORAGE_KEY_APP_THEME,
   STORAGE_KEY_TOKEN,
 } from '@common';
-import { takeLatestListeners } from '@listener';
-import { MyAppTheme, ThemeType } from '@theme';
-import { loadString } from '@utils/storage';
+import {takeLatestListeners} from '@listener';
+import {MyAppTheme, ThemeType} from '@theme';
+import {loadString} from '@utils/storage';
 
-import { appActions } from '../action-slice/app';
+import {appActions} from '../action-slice/app';
 
 takeLatestListeners()({
   actionCreator: appActions.startLoadApp,

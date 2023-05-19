@@ -1,5 +1,5 @@
-import { createDeepEqualSelector } from '@common';
-import { RootState } from '@store/all-reducers';
+import {createDeepEqualSelector} from '@common';
+import {RootState} from '@store/all-reducers';
 
 export const selectAppConfig = createDeepEqualSelector(
   (state: RootState) => state.app,

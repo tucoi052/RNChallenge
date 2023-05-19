@@ -3,7 +3,7 @@ import {
   authenticationReducer,
   checklistReducer,
 } from '@redux-slice';
-import { combineReducers } from '@reduxjs/toolkit';
+import {combineReducers} from '@reduxjs/toolkit';
 
 export const allReducer = combineReducers({
   app: appReducer,

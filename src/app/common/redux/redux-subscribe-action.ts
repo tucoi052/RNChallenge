@@ -1,6 +1,6 @@
-import { Action, Dispatch, Middleware, MiddlewareAPI } from '@reduxjs/toolkit';
+import {Action, Dispatch, Middleware, MiddlewareAPI} from '@reduxjs/toolkit';
 
-import { onCheckType } from '../method/index';
+import {onCheckType} from '../method/index';
 
 export type Listener = (action: Action) => void;
 type ActionListenerContainer = {
@@ -47,12 +47,12 @@ const _subscribeAction = (
 };
 
 export const subscribeActionBefore = (action: string, listener: Listener) => {
-  const actionListenerContainer = { action, listener };
+  const actionListenerContainer = {action, listener};
   return _subscribeAction(actionListenerContainer, _actionsSubscribedBefore);
 };
 
 export const subscribeActionAfter = (action: string, listener: Listener) => {
-  const actionListenerContainer = { action, listener };
+  const actionListenerContainer = {action, listener};
   return _subscribeAction(actionListenerContainer, _actionsSubscribedAfter);
 };
 
@@ -84,7 +84,7 @@ const _unsubscribeAction = (
   filterAction: string,
 ) => {
   const filteredListenerContainer = listenerContainer.filter(
-    ({ action }) => action !== filterAction,
+    ({action}) => action !== filterAction,
   );
   listenerContainer.length = 0;
   listenerContainer.push(...filteredListenerContainer);

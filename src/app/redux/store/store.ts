@@ -1,8 +1,8 @@
-import { subscribeActionMiddleware } from '@common';
-import { configureStore } from '@reduxjs/toolkit';
-import { allReducer } from '@store/all-reducers';
+import {subscribeActionMiddleware} from '@common';
+import {configureStore} from '@reduxjs/toolkit';
+import {allReducer} from '@store/all-reducers';
 
-import { listenerMiddleware } from '../listener';
+import {listenerMiddleware} from '../listener';
 
 /**
  * Use this instead storage of reduxPersist
@@ -21,7 +21,7 @@ export const store = configureStore({
   reducer: allReducer,
   devTools: devMode,
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({ serializableCheck: false })
+    getDefaultMiddleware({serializableCheck: false})
       .prepend(listenerMiddleware.middleware)
       .concat(middleware),
 });

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { SLICE_NAME } from '@config/type';
-import { CheckListStateI } from '@model/checklist';
+import {SLICE_NAME} from '@config/type';
+import {CheckListStateI} from '@model/checklist';
 import * as Action from '@redux-action-type/checklist';
 import {
   createAction,
@@ -19,7 +19,7 @@ const checklistSlice = createSlice({
     reset: () => initialState,
     changeFiled: (
       state,
-      { payload }: PayloadAction<{ field: keyof CheckListStateI; value: any }>,
+      {payload}: PayloadAction<{field: keyof CheckListStateI; value: any}>,
     ) => {
       state[payload.field] = payload.value;
     },

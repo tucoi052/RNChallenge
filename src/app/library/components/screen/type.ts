@@ -6,9 +6,9 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { Edge } from 'react-native-safe-area-context';
+import {Edge} from 'react-native-safe-area-context';
 
-import { CustomOmit } from '@common';
+import {CustomOmit} from '@common';
 
 export type ScreenProps = {
   /**

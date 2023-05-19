@@ -1,8 +1,8 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
-import { useMemo } from 'react';
+import {useMemo} from 'react';
 
-import { useTheme } from '@theme';
+import {useTheme} from '@theme';
 
 export const useStyle = () => {
   // state

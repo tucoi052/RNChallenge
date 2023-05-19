@@ -1,10 +1,10 @@
-import React, { forwardRef, useMemo } from 'react';
-import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
+import React, {forwardRef, useMemo} from 'react';
+import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 
-import { propsToStyle, sizeScale } from '@common';
-import { useTheme } from '@theme';
+import {propsToStyle, sizeScale} from '@common';
+import {useTheme} from '@theme';
 
-import { BlockProps } from './type';
+import {BoxProps} from './type';
 
 const styles = StyleSheet.create({
   block: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Block = forwardRef(
+export const Box = forwardRef(
   (
     {
       left,
@@ -76,7 +76,7 @@ export const Block = forwardRef(
       shadowConfig = {},
       style = {},
       ...rest
-    }: BlockProps,
+    }: BoxProps,
     ref: React.ForwardedRef<View>,
   ) => {
     // state
@@ -89,9 +89,9 @@ export const Block = forwardRef(
           borderWidth: 1,
           borderColor: '#bbb',
         },
-        colorTheme && { backgroundColor: theme.colors[colorTheme] },
-        borderColorTheme && { borderColor: theme.colors[borderColorTheme] },
-        middle && { alignItems: 'center' },
+        colorTheme && {backgroundColor: theme.colors[colorTheme]},
+        borderColorTheme && {borderColor: theme.colors[borderColorTheme]},
+        middle && {alignItems: 'center'},
         shadow && {
           shadowColor: '#000',
           shadowOffset: {
@@ -105,23 +105,23 @@ export const Block = forwardRef(
           ...shadowConfig,
         },
         propsToStyle([
-          { margin: sizeScale(m!) },
-          { marginLeft: sizeScale(ml!) },
-          { marginRight: sizeScale(mr!) },
-          { marginTop: sizeScale(mt!) },
-          { marginBottom: sizeScale(mb!) },
-          { marginVertical: sizeScale(mv!) },
-          { marginHorizontal: sizeScale(mh!) },
-          { flexDirection },
-          { padding: sizeScale(p!) },
-          { paddingRight: sizeScale(pr!) },
-          { paddingBottom: sizeScale(pb!) },
-          { paddingLeft: sizeScale(pl!) },
-          { paddingTop: sizeScale(pt!) },
-          { paddingHorizontal: sizeScale(ph!) },
-          { paddingVertical: pv },
-          { width: typeof w === 'number' ? sizeScale(w!) : w },
-          { height: typeof h === 'number' ? sizeScale(h!) : h },
+          {margin: sizeScale(m!)},
+          {marginLeft: sizeScale(ml!)},
+          {marginRight: sizeScale(mr!)},
+          {marginTop: sizeScale(mt!)},
+          {marginBottom: sizeScale(mb!)},
+          {marginVertical: sizeScale(mv!)},
+          {marginHorizontal: sizeScale(mh!)},
+          {flexDirection},
+          {padding: sizeScale(p!)},
+          {paddingRight: sizeScale(pr!)},
+          {paddingBottom: sizeScale(pb!)},
+          {paddingLeft: sizeScale(pl!)},
+          {paddingTop: sizeScale(pt!)},
+          {paddingHorizontal: sizeScale(ph!)},
+          {paddingVertical: pv},
+          {width: typeof w === 'number' ? sizeScale(w!) : w},
+          {height: typeof h === 'number' ? sizeScale(h!) : h},
           {
             maxHeight:
               typeof maxHeight === 'number' ? sizeScale(maxHeight!) : maxHeight,
@@ -138,36 +138,36 @@ export const Block = forwardRef(
             minWidth:
               typeof minWidth === 'number' ? sizeScale(minWidth!) : minWidth,
           },
-          { borderWidth },
-          { borderColor },
-          { backgroundColor },
-          { justifyContent },
-          { alignItems },
-          { alignSelf },
-          { borderRadius },
-          { flex },
-          { position },
-          { flexWrap },
-          { left },
-          { right },
-          { bottom },
-          { top },
-          { zIndex },
-          { overflow },
-          { borderBottomColor },
-          { borderBottomLeftRadius },
-          { borderBottomRightRadius },
-          { borderLeftColor },
-          { borderRightColor },
-          { borderStyle },
-          { borderTopColor },
-          { borderTopLeftRadius },
-          { borderTopRightRadius },
-          { opacity },
-          { borderBottomWidth },
-          { borderLeftWidth },
-          { borderRightWidth },
-          { borderTopWidth },
+          {borderWidth},
+          {borderColor},
+          {backgroundColor},
+          {justifyContent},
+          {alignItems},
+          {alignSelf},
+          {borderRadius},
+          {flex},
+          {position},
+          {flexWrap},
+          {left},
+          {right},
+          {bottom},
+          {top},
+          {zIndex},
+          {overflow},
+          {borderBottomColor},
+          {borderBottomLeftRadius},
+          {borderBottomRightRadius},
+          {borderLeftColor},
+          {borderRightColor},
+          {borderStyle},
+          {borderTopColor},
+          {borderTopLeftRadius},
+          {borderTopRightRadius},
+          {opacity},
+          {borderBottomWidth},
+          {borderLeftWidth},
+          {borderRightWidth},
+          {borderTopWidth},
         ]),
         style,
       ],

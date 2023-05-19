@@ -20,7 +20,7 @@ export * from './action-sheet';
 export * from './select';
 export * from './light-box';
 export * from './spacer';
-export * from './block';
+export * from './box';
 export * from './post-delay';
 export * from './list-view';
 export * from './snack-bar';
